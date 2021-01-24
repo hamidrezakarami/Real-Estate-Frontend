@@ -1,0 +1,26 @@
+<div class="f-w bootstrap-wrapper">
+  <div class="padding">
+    <div class="row section_title">
+      <div class="col">
+        <h3>header</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="card col-xl-4 col-md-6 col-lg-4"
+        *ngFor="let home of homeList"
+      >
+        <app-home-card
+          [for]="home.for"
+          [img]="home.img"
+          [addr]="home.addr"
+          [price]="home.price"
+          [topic]="home.topic"
+          [sqf]="home.sqf"
+          [bednum]="home.bednum"
+          [bathnum]="home.bathnum"
+        ></app-home-card>
+      </div>
+    </div>
+  </div>
+</div>

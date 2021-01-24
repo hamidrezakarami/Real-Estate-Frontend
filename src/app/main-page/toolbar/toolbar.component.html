@@ -16,21 +16,42 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
-
-  <div id="menuContainer" class="menu-container">
-    <a
-      @items
-      *ngFor="let menu of menuItems; let i = index"
-      mat-button
-      matLine
-      [class.selected-menu]="isCurrentRoute(menu.link)"
-      (click)="menu_OnClick(menu)"
-    >
-      <mat-icon *ngIf="menu.fontIcon">{{ menu.fontIcon }}</mat-icon>
-      <img *ngIf="menu.icon" src="{{ menu.icon }}" />
-      <span class="link-white">{{ menu.name }}</span>
-    </a>
+  
+  <div class="f-w bootstrap-wrapper">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-3">
+        <div class="logo">
+          <span>test</span>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="main-menu">
+          <div id="menuContainer" class="menu-container">
+            <a
+              @items
+              *ngFor="let menu of menuItems; let i = index"
+              mat-button
+              matLine
+              [class.selected-menu]="isCurrentRoute(menu.link)"
+              (click)="menu_OnClick(menu)"
+            >
+              <!-- <mat-icon *ngIf="menu.fontIcon">{{ menu.fontIcon }}</mat-icon> -->
+              <!-- <img *ngIf="menu.icon" src="{{ menu.icon }}" /> -->
+              <span class="link-white menu-font">{{ menu.name }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <mat-icon aria-hidden="false" aria-label="Search">search</mat-icon>
+        <button class="search-btn">
+          Search
+        </button>
+      </div>
+    </div>
   </div>
+
 
   <div *ngIf="isCurrentRoute('/search/students/edit-stop/')" class="smart-menu">
     <mat-icon>edit_location</mat-icon>
@@ -139,3 +160,4 @@
 </mat-toolbar>
 
 <div class="splitter"></div>
+

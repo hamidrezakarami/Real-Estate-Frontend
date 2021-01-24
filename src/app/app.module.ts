@@ -13,7 +13,8 @@ import { Toaster, ToastNotificationsModule } from './core/toast-notification';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+  
   ],
   imports: [
     BrowserModule,

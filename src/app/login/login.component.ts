@@ -111,7 +111,7 @@ export class LoginComponent extends Page implements OnInit {
     // this.userService.userLogin(body);
     // this.userService.LoginResult.subscribe((data) => {
     //   if (data) {
-        this.router.navigate(['main']);
+        this.router.navigate(['main/home']);
     //     // location.reload()
     //   }
     // });
