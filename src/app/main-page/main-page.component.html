@@ -1,0 +1,20 @@
+<mat-sidenav-container id="sidenav" class="main-page-container">
+    <mat-sidenav #sidenav class="main-page-sidenav mat-elevation-z10"
+    >
+    <!-- [mode]="isScreenSmall() ? 'over' : 'side'" -->
+      <mat-toolbar class="main-nav">
+        <mat-icon>apps</mat-icon>
+        <span>Navigation Menu</span>
+      </mat-toolbar>
+      <app-navbar></app-navbar>
+    </mat-sidenav>
+
+    <div class="main-page-sidenav-content">
+      <app-toolbar mode="over" (toggleSidenav)="sidenav.toggle()"></app-toolbar> 
+      <div class="wrapper">
+        <div class="background-image"></div>
+        <router-outlet></router-outlet>        
+      </div>
+    </div>
+</mat-sidenav-container> 
+

@@ -1,0 +1,242 @@
+.loading-bar{
+  position: absolute;
+  top: 0;
+  height: 3px;
+}
+.main-toolbar{
+    background-color:rgba(25, 118, 210, 0.404);
+    color: #fff;
+    height: 64px !important;
+  }
+
+  .right-menu{
+    min-width: 150px;
+  }
+
+  $iconWidth: 56px;
+
+.profile-button{
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    margin-top: -6px;
+    width: $iconWidth;
+    height: $iconWidth;      
+}
+
+.current-database{
+  right: 10px;
+  font-size: small;
+  position: absolute;
+  margin-top: 48px;
+}
+
+.profile-image{
+    // background-image: url(../../../assets/not-login.png);
+    background-size: cover;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+}
+ 
+.smart-menu{  
+  background-color: #00567d;
+  color: white;
+  // margin-top: 8px;
+  height: 64px;
+  width: 90px;
+  line-height: 73px;  
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+   
+  //padding-top: 5px;  
+  div{
+    background-color: #0dcccc;
+    width: 100%;
+    height: 7px;
+    margin-top: -7px;
+  }
+  mat-icon{
+    margin-right: 5px;
+    margin-left: 14px;
+  }
+}
+
+.sidenav-toggle {
+  width: $iconWidth;
+    height: $iconWidth;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  mat-icon {
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    line-height: $iconWidth;
+    color: white;
+  }
+}
+
+a{
+  hr{
+    margin: 0px;   
+  }
+}
+
+.selected-menu{
+  border-bottom: 2px solid white;
+}
+
+.splitter{
+  width: 100%;
+  height: 1px;  
+  background-color: #3efcfc66;
+}
+
+
+::ng-deep .cdk-overlay-pane .profile-menu{
+  margin-top: 58px;
+  margin-right: 13px;
+  min-width: 380px;
+  max-width: none;
+  overflow: inherit;  
+}
+
+::ng-deep .profile-menu .mat-menu-content{
+  padding: 0;
+}
+
+.item-button{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.menu-arrow{
+  font-size: 44px;
+  position: absolute;
+  right: -7px;
+  margin-top: -25px;
+  color: white;
+}
+
+
+.profile-header{  
+  padding-top: 15px;
+  margin : 15px;
+}
+
+.user-info{
+  position: absolute;
+  margin: 0 15px;
+  display: inline-block;
+  width: calc( 100% - 143px);
+  font-family: Roboto, RobotoDraft, Arial, sans-serif;
+  button{
+    line-height: 30px;
+  }
+  .user-name{
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 24px;
+  }
+
+  .profile-name{
+    font-weight: bold;    
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.account-list{
+  background: #f5f5f5;
+  border-top: 1px solid #ccc;
+  border-top-color: rgba(0,0,0,.2);
+  max-height: 230px;
+  overflow: auto;
+  button{
+    border-top: 1px solid #ccc;
+    border-top-color: rgba(0,0,0,.2);
+    white-space: nowrap;
+  }
+}
+
+.user-img-span{
+  display: inline-block;
+  border-radius: 50%;  
+  .avatar{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }  
+}
+
+.profile-view{
+    background: #4d90fe;
+    border-color: #3079ed;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    border: 1px solid #1d88cc;
+}
+
+.log-out{
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  font-weight: bold;
+    margin: 10px 0 0 0;
+    border: 1px solid #c6c6c6;
+}
+
+.profile-footer{  
+  border-top: 1px solid #ccc;
+  border-color: rgba(0,0,0,.2);  
+  img{
+    display: inline-block;
+    height: 64px;
+    vertical-align: top;
+    width: 64px;
+  }
+  span{
+    display: block;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.button-list{
+  display: block;
+  padding: 15px;  
+  max-width: 400px;
+  li{
+    padding: 1px;
+    display: inline-block;
+    vertical-align: top;
+    color: black;
+    z-index: 999;
+    height: 98px;
+    max-width: calc( 100% / 3 - 18px);
+    margin: 5px;
+
+    button{
+      width: 100%;     
+      padding: 0;      
+      font-size: 12px;
+      background-color: white;
+      span{
+        color: black;
+      }
+    }
+    border: 1px solid white;
+  }
+
+  li:hover{
+    border: 1px solid #c6c6c6;
+  }
+}

@@ -1,0 +1,141 @@
+<mat-progress-bar
+  *ngIf="loading"
+  class="loading-bar"
+  mode="indeterminate"
+></mat-progress-bar>
+<mat-toolbar
+  id="toolbar"
+  class="main-toolbar"
+  (window:resize)="windowOnResize($event)"
+>
+  <button
+    *ngIf="sidNavActive"
+    mat-icon-button
+    class="sidenav-toggle"
+    (click)="toggleSidenav.emit()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div id="menuContainer" class="menu-container">
+    <a
+      @items
+      *ngFor="let menu of menuItems; let i = index"
+      mat-button
+      matLine
+      [class.selected-menu]="isCurrentRoute(menu.link)"
+      (click)="menu_OnClick(menu)"
+    >
+      <mat-icon *ngIf="menu.fontIcon">{{ menu.fontIcon }}</mat-icon>
+      <img *ngIf="menu.icon" src="{{ menu.icon }}" />
+      <span class="link-white">{{ menu.name }}</span>
+    </a>
+  </div>
+
+  <div *ngIf="isCurrentRoute('/search/students/edit-stop/')" class="smart-menu">
+    <mat-icon>edit_location</mat-icon>
+    <span style="margin-top: -6px; position: absolute">Edit</span>
+  </div>
+
+  <div *ngIf="isCurrentRoute('/search/routes/edit-bus/')" class="smart-menu">
+    <mat-icon>show_chart</mat-icon>
+    <span style="margin-top: -6px; position: absolute">Edit</span>
+  </div>
+
+  <div
+    *ngIf="isCurrentRoute('/search/routes/edit-bus-location/')"
+    class="smart-menu"
+  >
+    <mat-icon>edit_location</mat-icon>
+    <span style="margin-top: -6px; position: absolute">Edit</span>
+  </div>
+
+  <span class="current-database">{{ currentDB }}</span>
+  <button
+    mat-icon-button
+    class="profile-button"
+    [matMenuTriggerFor]="profile"
+    style="padding: 0px !important"
+    [class.selected-menu]="isProfileSelected()"
+  >
+    <div
+      mat-card-avatar
+      class="profile-image"
+      [matTooltip]="getProfileTooltip()"
+    ></div>
+  </button>
+
+  <mat-menu #profile="matMenu" class="profile-menu">
+    <i class="material-icons menu-arrow">arrow_drop_up</i>
+
+    <!-- *ngIf="userService.UserLogin" -->
+    <div
+      class="profile-header"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="user-img-span">
+        <div
+          class="avatar"
+          style="color: white"
+          [style.backgroundColor]="getColor()"
+        >
+          {{ getFullNameProfile(true) }}
+        </div>
+      </div>
+      <div class="user-info">
+        <!-- <div class="profile-name">
+          <span *ngIf="userService.UserLogin">{{ getFullNameProfile() }}</span>
+          <span *ngIf="!userService.UserLogin" class="guest">Guest</span>
+        </div> -->
+        <!-- <div class="user-name">
+          <span *ngIf="userService.UserLogin">{{
+            userService.UserLogin.UserName
+          }}</span>
+        </div> -->
+        <div style="line-height: 34px">
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="showProfile()"
+            class="profile-view"
+          >
+            Profile
+          </button>
+          <button
+            mat-flat-button
+            color="transparency"
+            (click)="userLogout()"
+            class="log-out"
+          >
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="account-list" (click)="$event.stopPropagation()">
+      <!-- <button
+        *ngFor="let item of accountList; let i = index"
+        mat-menu-item
+        (click)="accountChange_OnClick(item)"
+        class="account-item"
+      >
+        <mat-icon>{{ getSelectedAccountIcon(item.AccountID) }}</mat-icon>
+        <span> {{ item.AccountName }}</span>
+      </button> -->
+    </div>
+
+    <div class="profile-footer">
+      <ul class="button-list">
+        <li *ngFor="let menu of actionButtonList" [matTooltip]="menu.name">
+          <button mat-flat-button (click)="menu_OnClick(menu)">
+            <img [src]="menu.icon" />
+            <span>{{ menu.name }}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="splitter"></div>

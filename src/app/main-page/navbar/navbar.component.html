@@ -1,0 +1,13 @@
+<a
+  @items
+  *ngFor="let menu of getSidNavItem(); let i = index"
+  mat-button
+  matLine
+  [routerLink]="menu.link"
+  class="menu-item"
+  [class.selected-menu]="isCurrentRoute(menu.link)"
+>
+  <mat-icon *ngIf="menu.fontIcon">{{ menu.fontIcon }}</mat-icon>
+  <img *ngIf="menu.icon" class="img-icon" src="{{ menu.icon }}" />
+  <span class="link-white">{{ menu.name }}</span>
+</a>
