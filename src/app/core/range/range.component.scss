@@ -1,0 +1,53 @@
+  .greyLine { width: 100%;height: 2px;background-color: darkgrey;position: relative;}
+  .chosenLine{margin-top: -4px; width:100% ;height: 6px;background-color: dodgerblue;position: relative;}
+  .container {z-index: 4;padding-top: 20px; height: 52px; position: relative; padding-left: 0px; width: 100%;   }
+  .handler1 {margin-left: -5px; width: 10px; height: 10px;  position: absolute;   }
+  .handler2 {margin-left: -5px; width: 10px; height: 10px;  position: absolute;  }
+  .startTime {color:black; width:10px ;font-size: 12px; }
+  .endTime {color:black; width:10px ;  font-size: 12px; }
+  i.sliderButton{
+  
+    position: absolute;
+    margin-top: -15px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+  }
+ 
+  .endButton{
+    color: white;
+  }
+  .startButton{
+    color:white;
+  }
+  .panoramaIcon{
+    margin-left: -30px;
+    color:black;
+  }
+  .Icon{
+margin-left: -30px;
+color:black;
+  }
+  .zIndexUp{
+      z-index: 2;
+  }
+  .zIndexDown{
+       z-index: 1;
+  }
+  .timesLabel{
+    margin-top: -62px;
+    text-align: center;
+    width: 96%;
+    padding-right: 10px;
+    display: block;
+    margin-top: -40px;
+    font-size: 12px;
+  }
+  .rangeSlider{
+   // width:100%;
+   // padding-left: 30px;
+    padding-right: 30px;
+  }
+ 

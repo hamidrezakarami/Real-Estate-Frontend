@@ -1,0 +1,93 @@
+<div class="header">
+  <h2 mat-dialog-title>Export {{ objectTitle }}</h2>
+</div>
+
+<mat-dialog-content>
+  <mat-spinner
+    [diameter]="32"
+    class="loading"
+    *ngIf="serviceProcess"
+  ></mat-spinner>
+  <mat-horizontal-stepper
+    #stepper
+    (selectionChange)="stepper_SelectionChange($event)"
+  >
+    <mat-step>
+      <ng-template matStepLabel>Choose Fields</ng-template>
+      <div class="content">
+        <mat-checkbox [checked]="checkBoxSelectAll" (change)="checkSelectAll()"
+          >Select All</mat-checkbox
+        >
+        <ul class="flex-container longhand">
+          <li class="flex-item" *ngFor="let item of fields">
+            <mat-checkbox
+              [checked]="item.Checked == true"
+              (change)="field_OnCheckChanged(item, $event)"
+              >{{ item.Field }}</mat-checkbox
+            >
+          </li>
+        </ul>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Configuration</ng-template>
+      <div id="inputList" class="content">
+        <label style="margin-left: 10px">Data Format:</label>
+        <mat-radio-group
+          [(ngModel)]="formatType"
+          style="margin-left: 20px; padding: 5px"
+        >
+          <mat-radio-button value="JSON">JSON</mat-radio-button>
+          <mat-radio-button value="CSV">CSV</mat-radio-button>
+        </mat-radio-group>
+        <ul class="flex-container longhand" style="margin-top: 10px">
+          <li class="flex-item" *ngFor="let item of selectedFields">
+            <mat-form-field style="width: 100%">
+              <input
+                matInput
+                placeholder="{{ item.Field }}"
+                [(ngModel)]="item.Alias"
+              />
+            </mat-form-field>
+          </li>
+        </ul>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Export</ng-template>
+      <div class="content">
+        <table class="t2 t3">
+          <tr>
+            <th *ngFor="let item of selectedFields">{{ item.Alias }}</th>
+          </tr>
+          <tr *ngFor="let row of dataPreview">
+            <td *ngFor="let cell of getArray(row)" class="ellipsis">
+              <span>{{ cell }}</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="dismiss()" style="float: right">
+    <mat-icon>clear</mat-icon>Cancel
+  </button>
+  <button
+    mat-raised-button
+    *ngIf="stepper.selectedIndex != 0"
+    style="float: right"
+    (click)="back_OnClick()"
+  >
+    Back
+  </button>
+  <button
+    mat-raised-button
+    style="float: right"
+    color="primary"
+    (click)="next_OnClick(downloadUrl)"
+  >
+    {{ nextTitle }}
+  </button>
+</mat-dialog-actions>

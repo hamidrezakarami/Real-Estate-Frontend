@@ -1,0 +1,122 @@
+.mat-dialog-content {
+  height: calc( 100% - 150px);
+}
+
+.mat-dialog-container{
+  padding: 5px;
+}
+
+.mat-dialog-title{
+  margin: 0;
+}
+
+.mat-dialog-actions{
+  float: right;
+}
+
+.mat-dialog-actions {
+  padding: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: -35px;
+}
+
+.header{
+  background-color: rgb(40, 123, 160);
+  color: white;  
+  padding: 10px;
+}
+
+.content{
+  padding: 15px 15px;  
+  overflow-y: auto;   
+}
+
+.flex-item {
+  padding: 5px;
+  width: 30%;
+  margin: 5px;
+  height: 30px;
+}
+
+.flex-container {  
+  overflow: hidden;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+li{
+  height: 30px;
+}
+
+.setting {
+  padding-top: 15px;
+}
+
+.field-list {
+  margin-top: 15px;
+  padding: 0;
+  height: 270px;
+  overflow-y: auto;
+}
+
+.loading{
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+
+
+#inputList ::ng-deep .mat-form-field-label-wrapper{
+  display: none;
+}
+
+md-input-container.md-input-focused label {
+  display: none
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #999999;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.t2 { border-collapse: collapse; }
+.t3 th { white-space: nowrap; min-width: 60px;}
+.ellipsis {
+  position: relative;
+}
+.ellipsis:before {
+  content: '&nbsp;';
+  visibility: hidden;  
+}
+.ellipsis span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 5px;
+}

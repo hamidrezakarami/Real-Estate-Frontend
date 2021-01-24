@@ -1,0 +1,118 @@
+<div class="full top-bg"></div>
+
+
+<mat-card  class="login mat-elevation-z10 login-card">
+  <div id="login">
+  <mat-tab-group  [selectedIndex]="selectedTab" class="tabs">
+    <mat-tab>
+      <div fxFlex="100%">
+        <mat-toolbar class="toolbar">
+          <mat-toolbar-row> Login User </mat-toolbar-row>
+        </mat-toolbar>
+        <div class="form">
+          <mat-form-field fxFlex="100%" class="full-width">
+            <input
+              matInput
+              placeholder="User Name"
+              #userRef
+              (keydown)="input_onKeyDownLog($event)"
+              [formControl]="userInputFormControl"
+              />
+          </mat-form-field>
+          <mat-form-field fxFlex="100%" class="full-width">
+            <input
+              matInput="password"
+              placeholder="Your Password"
+              type="Password"
+              #passwordRef
+              (keydown)="input_onKeyDownLog($event)"
+              [formControl]="passwordInputFormControl"
+              />
+          </mat-form-field>
+          <div fxFlex="100%" *ngIf="errorDescription" class="error">
+            <span class="error">{{ errorDescription }}</span>
+          </div>
+          <div class="pos">
+            <mat-checkbox class="Remember" fxFlex="50%"
+              >Keep Me Logged In</mat-checkbox
+            >
+          </div>
+          <div class="pos margin-top-50">
+            <button
+              fxFlex="50%"
+              mat-raised-button
+              (click)="loginUser(userRef.value, passwordRef.value)"
+              class="login-btn"
+              #loginInput
+            >
+              Login
+            </button>
+            <button class="forget-btn" fxFlex="50%" mat-button (click)="next()">
+              Forget password ?
+            </button>
+            <mat-spinner
+              fxFlex="50%"
+              *ngIf="loginProcess"
+              diameter="40"
+              style="float: right"
+            ></mat-spinner>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <!-- forget password -->
+    <mat-tab>
+      <mat-icon (click)="back()" class="back-icon" color="primary"
+        >keyboard_backspace</mat-icon
+      >
+      <div
+        fxFlex="100%"
+        class="forgetPassword"
+        fxLayout="column"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="0.5%"
+        fxLayoutAlign="center"
+      >
+        <mat-toolbar class="toolbar">
+          <mat-toolbar-row> Forget Password </mat-toolbar-row>
+        </mat-toolbar>
+        <div class="form">
+          <mat-form-field class="email" fxFlex="100%">
+            <mat-label>Email</mat-label>
+            <input
+              #emailRef
+              (keydown)="input_onKeyDownFrg($event, emailRef.value)"
+              matInput
+              email
+              required
+              type="email"
+              />
+            <mat-hint>required</mat-hint>
+          </mat-form-field>
+          <label id="emailStatus" class="emailStatus"></label>
+          <div class="resetBack">
+            <button
+              fxFlex="40%"
+              color="primary"
+              mat-raised-button
+              class="reset-pass-btn"
+              id="reset"
+              (click)="forgetPas(emailRef.value)"
+            >
+              {{ sendButtonText }}
+            </button>
+            <mat-spinner
+              fxFlex
+              *ngIf="emailProcess"
+              diameter="40"
+              style="float: right"
+            ></mat-spinner>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+</mat-card>

@@ -1,0 +1,27 @@
+<div id={{name}} class="rangeSlider" >
+    <div id="containerID{{name}}" class="container"  (mouseup)="mouseUp(name)" (mousemove)="mouseMove($event)">
+
+        <div id="greyLineID{{name}}" class="greyLine"></div>
+        <div id="chosenLineID{{name}}" class="chosenLine"></div>
+
+        <div id="left_handler{{name}}" class="handler1" (mousedown)="mousedown0(name)" style="left:0%">
+            <i class=" material-icons sliderButton startButton"> lens
+                <i class=" material-icons panoramaIcon">panorama_fish_eye
+                    <i class="material-icons Icon">navigate_next </i>
+                </i>
+            </i>
+        </div>
+        <div id="right_handler{{name}}" class="handler2" (mousedown)="mousedown1(name)" style="left:100%">
+            <i class=" material-icons sliderButton endButton ">lens
+                <i class=" material-icons panoramaIcon ">panorama_fish_eye
+                    <i class="material-icons Icon">navigate_before </i>
+                </i>
+            </i>
+        </div>
+    </div>
+</div>
+
+<div class="timesLabel">(
+    <span id="startTimeID{{name}}" class="startTime"></span> -
+    <span id="endTimeID{{name}}" class="endTime"></span> )
+</div>

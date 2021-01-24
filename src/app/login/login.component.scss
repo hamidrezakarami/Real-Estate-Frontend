@@ -1,0 +1,184 @@
+
+mat-toolbar-row{
+  display: inline;
+  font-size: xx-large;
+ }
+
+.login {
+  z-index: 2;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 1px;
+  width: 400px;
+  overflow: hidden;
+}
+
+mat-card{
+  overflow: hidden;
+} 
+
+.title {
+  height: 32px;
+  padding: 5px;
+}
+
+
+ #login{
+  ::ng-deep mat-tab-header.mat-tab-header {
+    display: none; 
+
+  }
+} 
+
+.toolbar {
+  text-align: center;
+  margin: 10px !important;
+  width: auto;
+  min-height: 50px !important;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.icon {
+  padding: 0 14px;
+}
+
+
+.spacer{
+  flex: 1 1 auto;
+} 
+
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.error{
+  color: red;
+  margin-bottom: 15px;
+}
+
+.full{
+  margin-top: -70px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  z-index: 1
+}
+
+.top-bg{
+  // background-image: url("./../../assets/images/backgrounds/1.jpg") ; 
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 107vh;    
+  background-size: cover;
+}
+mat-tab{
+  overflow: hidden;
+}
+
+.Remember{
+  float: left;
+}
+
+.pos{
+  display: flow-root;
+  margin: 15px auto;
+}
+
+.forgetButton{
+  float: right;
+  margin: -7px 0 0 0;
+  font-size: 14px;
+}
+
+.forgetPassword{
+  height: 387px;
+  overflow: hidden;
+}
+
+.email{
+  margin: 50px 0 auto;
+  width: 100%;
+}
+
+.resetBack{
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.resetBack .reset{
+  float: left;
+  height: 40px;
+  font-size: 14px;
+}
+
+.resetBack {
+  float: left;
+  height: 40px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.disable{
+
+  visibility: hidden;
+}
+
+.emailStatus{
+  margin-top: -25px;
+  /* //padding-top: 15px;
+  // position: absolute; */
+}
+  
+.login-card{
+  min-height: 417px;
+  max-width: 340px;
+  position: relative;
+  padding: 3em 2em;
+  background: rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+  
+
+.bus-icon{
+  text-align: --webkit-center;
+  color: white;
+}
+
+.login-btn{
+  color: white;
+  background-color: #2a74c4;
+  width: 100%;
+}
+
+.reset-pass-btn{
+  color: white;
+  background-color: #2a74c4;
+  margin-top: 73px;
+  width: 70%;
+  position: absolute;
+  bottom: 10%;
+  transform: translate(-50%, -10%);
+  left: 50%;
+}
+
+.margin-top-50{
+  margin-top: 50px;
+}
+
+.back-icon{
+  cursor: pointer
+}
+
+.forget-btn{
+  color :#2a74c4
+}
