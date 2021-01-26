@@ -1,14 +1,22 @@
+<mat-accordion>
+  <mat-expansion-panel [expanded]="panelOpenState" class="mt-50" hideToggle>
+    <app-search-bar></app-search-bar>
+  </mat-expansion-panel>
+
+</mat-accordion>
+<button (click) = "hamid_btn()">hamid</button>
 <div class="f-w bootstrap-wrapper">
   <div class="padding">
     <div class="row section_title">
-      <div class="col">
-        <h3>header</h3>
+      <div class="col mt-80">
+        <h3>Real Estate</h3>
       </div>
     </div>
     <div class="row">
       <div
         class="card col-xl-4 col-md-6 col-lg-4"
         *ngFor="let home of homeList"
+        (click)="clickOn_card(home)"
       >
         <app-home-card
           [for]="home.for"
@@ -20,6 +28,20 @@
           [bednum]="home.bednum"
           [bathnum]="home.bathnum"
         ></app-home-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="popular_property">
+          <div class="more_property_btn text-center">
+            <button class="boxed-btn3-line">More Properties</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="f-w">
+        <app-home-detail></app-home-detail>
       </div>
     </div>
   </div>

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  panelOpenState: boolean = false;
   homeList: {
     for: string;
     img: string;
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
   }[] = [
     {
       for: 'sale',
-      img: '../../../assets/download.jpg',
+      img: './assets/01.jpg',
       topic: 'Comfortable Apartment in Palace',
       addr: 'here',
       price: 20,
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit {
     },
     {
       for: 'sale',
-      img: '../../../../../assets/download.jpg',
+      img: './assets/02.jpg',
       topic: 'Comfortable Apartment in Palace',
       addr: 'here',
       price: 20,
@@ -38,7 +39,7 @@ export class HomeComponent implements OnInit {
     },
     {
       for: 'sale',
-      img: '../../assets/download.jpg',
+      img: './assets/03.jpg',
       topic: 'Comfortable Apartment in Palace',
       addr: 'here',
       price: 20,
@@ -48,7 +49,7 @@ export class HomeComponent implements OnInit {
     },
     {
       for: 'sale',
-      img: '../../../../../../assets/download.jpg',
+      img: './assets/04.jpg',
       topic: 'Comfortable Apartment in Palace',
       addr: 'here',
       price: 20,
@@ -58,7 +59,7 @@ export class HomeComponent implements OnInit {
     },
     {
       for: 'sale',
-      img: './assets/download.jpg',
+      img: './assets/05.jpg',
       topic: 'Comfortable Apartment in Palace',
       addr: 'here',
       price: 20,
@@ -68,7 +69,7 @@ export class HomeComponent implements OnInit {
     },
     {
       for: 'sale',
-      img: '../../../../assets/download.jpg',
+      img: './assets/06.jpg',
       topic: 'home',
       addr: 'here',
       price: 20,
@@ -81,4 +82,11 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  clickOn_card(home) {
+    console.log(home);
+  }
+  hamid_btn() {
+    this.panelOpenState = !this.panelOpenState;
+  }
 }

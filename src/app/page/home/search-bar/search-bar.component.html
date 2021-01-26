@@ -1,0 +1,77 @@
+<div class="bootstrap-wrapper">
+  <div class="slider_area">
+    <div class="single_slider d-flex align-items-center slider_bg_1">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-10 offset-xl-1">
+            <div class="slider_text text-center justify-content-center">
+              <h3>Find your best Property</h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+            </div>
+            <div class="property_form">
+              <form action="">
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="form_wrap d-flex">
+                      <div class="single-field max_width">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Location</mat-label>
+                          <mat-select>
+                            <mat-option
+                              *ngFor="let city of citys"
+                              [value]="city.value"
+                            >
+                              {{ city.name }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Property type</mat-label>
+                          <mat-select>
+                            <mat-option
+                              *ngFor="let city of citys"
+                              [value]="city.value"
+                            >
+                              {{ city.name }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        <ng5-slider
+                          [(value)]="value"
+                          [(highValue)]="highValue"
+                          [options]="options"
+                        ></ng5-slider>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Bed Room</mat-label>
+                          <mat-select>
+                            <mat-option
+                              *ngFor="let city of citys"
+                              [value]="city.value"
+                            >
+                              {{ city.name }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Bath Room</mat-label>
+                          <mat-select>
+                            <mat-option
+                              *ngFor="let city of citys"
+                              [value]="city.value"
+                            >
+                              {{ city.name }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

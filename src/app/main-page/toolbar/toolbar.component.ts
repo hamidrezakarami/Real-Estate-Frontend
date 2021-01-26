@@ -20,7 +20,6 @@ import { Assistant } from '../../shared/Pipe/Assistant';
 import { menuItemAnimation } from './toolbar.animations';
 // import { MenuService } from '../menu.service';
 
-
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
@@ -29,6 +28,7 @@ import { menuItemAnimation } from './toolbar.animations';
 })
 export class ToolbarComponent extends Page implements OnInit {
   // accountList: UserAccount[];
+  panelOpenState: boolean = false;
   menuItems: any[] = [];
   sidNavActive: boolean = false;
   itemLength: number = 0;
@@ -42,8 +42,7 @@ export class ToolbarComponent extends Page implements OnInit {
     // public userService: UserService,
     private snackBar: MatSnackBar,
     private router: Router,
-    public dialog: MatDialog,
-    // public ms: MenuService
+    public dialog: MatDialog // public ms: MenuService
   ) {
     super(null, (error, action, className) => {
       this.snackBar.open(error, action, {
@@ -171,14 +170,14 @@ export class ToolbarComponent extends Page implements OnInit {
   }
 
   getProfileTooltip() {
-  //   if (
-  //     this.userService.UserLogin == null ||
-  //     this.userService.UserLogin.FormalName == null
-  //   ) {
-  //     return '';
-  //   } else {
-  //     return this.userService.UserLogin.FormalName + ' welcome! ';
-  //   }
+    //   if (
+    //     this.userService.UserLogin == null ||
+    //     this.userService.UserLogin.FormalName == null
+    //   ) {
+    //     return '';
+    //   } else {
+    //     return this.userService.UserLogin.FormalName + ' welcome! ';
+    //   }
   }
 
   getCurrentDB() {
@@ -252,7 +251,7 @@ export class ToolbarComponent extends Page implements OnInit {
 
   getSelectedAccountIcon(accountID: number): string {
     // if (accountID == this.userService.SelectedAccountID) {
-      return 'check_circle';
+    return 'check_circle';
     // } else return 'panorama_fish_eye';
   }
 
@@ -279,10 +278,9 @@ export class ToolbarComponent extends Page implements OnInit {
   }
 
   menu_OnClick(menu: any) {
-
     this.router.navigate([menu.link]);
     console.log(menu.link);
-    
+
     // this.loading = true;
     // if (this.ms.thislink && this.ms.thislink.toString() === menu.link) {
     //   this.router
@@ -313,5 +311,9 @@ export class ToolbarComponent extends Page implements OnInit {
         return true;
       }
     });
+  }
+
+  onSearchBtn() {
+    this.panelOpenState = !this.panelOpenState;
   }
 }
