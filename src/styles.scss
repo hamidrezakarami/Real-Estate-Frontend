@@ -1,9 +1,290 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css"
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
-.f-w{
-    width: 100%;
+.f-w {
+  width: 100%;
+}
+
+// @import "./app/app.component.sass"
+
+// body
+//     margin: 0
+
+.fill-space {
+  // This fills the remaining space, by using flexbox.
+  // Every toolbar row uses a flexbox row layout.
+  flex: 1 1 auto;
+}
+
+// .marginT88
+//     margin-top: 88px
+
+// .marginT5
+//     margin-top: 5px
+
+// .marginL10
+//     margin-left: 10px
+
+// .marginL20
+//     margin-left: 20px
+
+// .div-class
+//     margin: 0px
+//     padding: 0px !important
+//     box-shadow: none !important
+
+// .full-width
+//   width: 100%
+
+// .flex-container
+//     display: flex
+//     flex-wrap: wrap
+//     flex-direction: row
+
+//     .flex-15
+//         width: 15%
+
+//     .flex-20
+//         width: 20%
+
+//     .flex-25
+//         width: 25%;
+
+//     .flex-30
+//         width: 30%
+
+//     .flex-33
+//         width: 33.33%
+
+//     .flex-35
+//         width: 35%
+
+//     .flex-40
+//         width: 40%
+
+//     .flex-45
+//         width: 45%
+
+//     .flex-50
+//         width: 50%
+
+//     .flex-65
+//         width: 65%
+
+//     .flex-60
+//         width: 60%
+
+//     .flex-70
+//         width: 70%
+
+//     .flex-75
+//         width: 75%;
+
+//     .flex-85
+//         width: 85%
+
+//     .flex-100
+//         width: 99%
+
+// .flex-container-inherit
+//   display: flex !important
+//   flex-warp : inherit
+//   flex-direction : row
+
+// .margin-left-10
+//     margin-left: 10%
+
+.right {
+  float: right;
+}
+
+// .padding-5
+//     padding: 5px
+
+// .padding-left-10
+//     padding-left: 10px
+
+// .font-13
+//     font-size: 13px
+
+.spinner {
+  float: right;
+  margin: -15px !important;
+}
+
+// .height-79
+//     height: 79vh
+
+// .highchart-height
+//     height: 100%
+
+.mat-paginator-range-actions {
+  width: 100% !important;
+}
+
+.mat-paginator-range-label {
+  position: absolute;
+  margin: 40px 0px 0px 39px !important;
+}
+
+.left-container {
+  margin-right: 15px;
+  width: 240px;
+  padding: 0;
+  height: calc(100vh - 165px);
+  overflow: hidden;
+}
+
+/* Scorll bar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(to right, rgb(188, 202, 224), rgb(205, 214, 228));
+  box-shadow: inset 0 0 1px 1px #5c6670;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #eee;
+  box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #8391a6, #536175);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 1px 1px rgba(187, 187, 187, 0.5),
+    inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+// snack-bar-container.red-snackbar
+//     background: #BF360C
+
+// snack-bar-container.yellow-snackbar
+//     background: #F57F17
+
+// snack-bar-container.green-snackbar
+//     background: #004D40
+
+// snack-bar-container.default-snackbar
+//     background: #424242
+
+.red-snackbar .mat-simple-snackbar-action {
+  color: white !important;
+}
+
+.yellow-snackbar .mat-simple-snackbar-action {
+  color: rgb(95, 50, 13) !important;
+}
+
+.green-snackbar .mat-simple-snackbar-action {
+  color: white !important;
+}
+
+.default-snackbar .mat-simple-snackbar-action {
+  color: white !important;
+}
+
+//app component
+
+.search-box {
+  background-color: rgb(17, 136, 233);
+  height: 50px;
+  clear: both;
+  z-index: 2;
+  display: flex;
+}
+
+.search-input {
+  color: black;
+  margin-left: 5px;
+  width: 95%;
+}
+
+.mat-form-field-underline {
+  background-color: #eceff1 !important;
+}
+
+.mat-expansion-panel-body {
+  padding: 11px 24px 16px !important;
+}
+
+// .export-button
+//     z-index: 3
+//     background-color: white;
+//     // position: absolute
+//     // width: 42px
+//     // height: 42px
+//     // margin-top: 3px
+//     // margin-left: 3px
+
+//     mat-icon
+//         font-size: 28px
+//         margin-left: -5px
+//         color: #1a73e8
+
+// .clear-filter
+//     align-items: center;
+//     border: none;
+//     display: inline-flex;
+//     justify-content: center;
+//     position: relative;
+//     z-index: 0;
+//     -webkit-font-smoothing: antialiased;
+//     font-family: 'Google Sans', Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+//     font-size: .875rem;
+//     letter-spacing: .25px;
+//     background: none;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     color: #5f6368;
+//     cursor: pointer;
+//     font-weight: 500;
+//     height: 36px;
+//     min-width: 80px;
+//     padding: 0 16px;
+//     margin: 0 8px 0 0;
+//     outline: none;
+
+.seach-btn {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  background: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #5f6368;
+  cursor: pointer;
+  font-weight: 500;
+  height: 36px;
+  min-width: 80px;
+  outline: none;
+  padding: 0 16px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+}
+
+.search-search {
+  margin-left: -3px;
+  margin-top: 7px;
 }
