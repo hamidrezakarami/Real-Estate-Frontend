@@ -18,6 +18,7 @@ import { Page } from '../../core/Page';
 import { Location } from '@angular/common';
 import { Assistant } from '../../shared/Pipe/Assistant';
 import { menuItemAnimation } from './toolbar.animations';
+import { SharedService } from 'src/app/shared/shared.service';
 // import { MenuService } from '../menu.service';
 
 @Component({
@@ -39,7 +40,7 @@ export class ToolbarComponent extends Page implements OnInit {
   @Output() toggleSidenav = new EventEmitter<void>();
 
   constructor(
-    // public userService: UserService,
+    public sharedService: SharedService,
     private snackBar: MatSnackBar,
     private router: Router,
     public dialog: MatDialog // public ms: MenuService
@@ -314,6 +315,6 @@ export class ToolbarComponent extends Page implements OnInit {
   }
 
   onSearchBtn() {
-    this.panelOpenState = !this.panelOpenState;
+    this.sharedService.searchBtnFlag = !this.sharedService.searchBtnFlag;
   }
 }

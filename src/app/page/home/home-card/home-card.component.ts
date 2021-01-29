@@ -14,8 +14,10 @@ export class HomeCardComponent implements OnInit {
   @Input() sqf: number;
   @Input() bednum: number;
   @Input() bathnum: number;
+  @Input() id: string;
 
   constructor() {}
 
   ngOnInit(): void {}
+
 }

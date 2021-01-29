@@ -286,7 +286,7 @@ a {
   background: rgba(255, 255, 255, 0.96);
   background: #2c2c2c;
 }
-.main-header-area0.sticky{
+.main-header-area0.sticky {
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -324,6 +324,17 @@ a {
   cursor: pointer;
 }
 
-.mt-6{
+.account-icon {
+  margin: 6px 0px;
+  font-size: 35px;
+  color: #c2c2c0;
+}
+
+.account-name {
+  margin: 9px 13px;
+  color: whitesmoke;
+}
+
+.mt-6 {
   margin-top: 6px;
 }

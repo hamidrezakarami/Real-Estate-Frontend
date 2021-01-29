@@ -1,8 +1,7 @@
-
-mat-toolbar-row{
+mat-toolbar-row {
   display: inline;
   font-size: xx-large;
- }
+}
 
 .login {
   z-index: 2;
@@ -13,22 +12,20 @@ mat-toolbar-row{
   overflow: hidden;
 }
 
-mat-card{
+mat-card {
   overflow: hidden;
-} 
+}
 
 .title {
   height: 32px;
   padding: 5px;
 }
 
-
- #login{
+#login {
   ::ng-deep mat-tab-header.mat-tab-header {
-    display: none; 
-
+    display: none;
   }
-} 
+}
 
 .toolbar {
   text-align: center;
@@ -42,11 +39,9 @@ mat-card{
   padding: 0 14px;
 }
 
-
-.spacer{
+.spacer {
   flex: 1 1 auto;
-} 
-
+}
 
 .form {
   width: 80%;
@@ -54,67 +49,85 @@ mat-card{
   margin-top: 20px;
 }
 
-.error{
+.error {
   color: red;
   margin-bottom: 15px;
 }
 
-.full{
-  margin-top: -70px;
+.full {
+  margin-top: -7vh;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: aliceblue;
-  z-index: 1
+  z-index: 1;
+}
+.slider_area {
+  height: 712px;
+  width: 120%;
+  margin-left: -10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.top-bg{
-  // background-image: url("./../../assets/images/backgrounds/1.jpg") ; 
+.slider_area::before {
+  background: #001d38;
   position: absolute;
-  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  opacity: .6;
+}
+
+.top-bg {
+  background-image: url("./../../assets/02.jpg");
+  // position: absolute;
+  // z-index: 1;
   top: 0;
   right: 0;
   left: 0;
-  height: 107vh;    
+  height: 107vh;
   background-size: cover;
 }
-mat-tab{
+mat-tab {
   overflow: hidden;
 }
 
-.Remember{
+.Remember {
   float: left;
 }
 
-.pos{
+.pos {
   display: flow-root;
   margin: 15px auto;
 }
 
-.forgetButton{
+.forgetButton {
   float: right;
   margin: -7px 0 0 0;
   font-size: 14px;
 }
 
-.forgetPassword{
+.forgetPassword {
   height: 387px;
   overflow: hidden;
 }
 
-.email{
+.email {
   margin: 50px 0 auto;
   width: 100%;
 }
 
-.resetBack{
+.resetBack {
   display: inline-block;
   width: 100%;
   margin-top: 20px;
 }
 
-
-.resetBack .reset{
+.resetBack .reset {
   float: left;
   height: 40px;
   font-size: 14px;
@@ -127,40 +140,38 @@ mat-tab{
   margin-right: 10px;
 }
 
-.disable{
-
+.disable {
   visibility: hidden;
 }
 
-.emailStatus{
+.emailStatus {
   margin-top: -25px;
   /* //padding-top: 15px;
   // position: absolute; */
 }
-  
-.login-card{
+
+.login-card {
   min-height: 417px;
   max-width: 340px;
   position: relative;
   padding: 3em 2em;
   background: rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
-  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
 }
-  
 
-.bus-icon{
+.bus-icon {
   text-align: --webkit-center;
   color: white;
 }
 
-.login-btn{
+.login-btn {
   color: white;
   background-color: #2a74c4;
   width: 100%;
 }
 
-.reset-pass-btn{
+.reset-pass-btn {
   color: white;
   background-color: #2a74c4;
   margin-top: 73px;
@@ -171,14 +182,14 @@ mat-tab{
   left: 50%;
 }
 
-.margin-top-50{
+.margin-top-50 {
   margin-top: 50px;
 }
 
-.back-icon{
-  cursor: pointer
+.back-icon {
+  cursor: pointer;
 }
 
-.forget-btn{
-  color :#2a74c4
+.forget-btn {
+  color: #2a74c4;
 }

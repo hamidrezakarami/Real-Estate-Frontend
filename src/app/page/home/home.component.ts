@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  panelOpenState: boolean = false;
   homeList: {
+    id: string;
     for: string;
     img: string;
     topic: string;
@@ -18,6 +20,7 @@ export class HomeComponent implements OnInit {
     bathnum: number;
   }[] = [
     {
+      id: '1',
       for: 'sale',
       img: './assets/01.jpg',
       topic: 'Comfortable Apartment in Palace',
@@ -28,6 +31,7 @@ export class HomeComponent implements OnInit {
       bathnum: 1,
     },
     {
+      id: '2',
       for: 'sale',
       img: './assets/02.jpg',
       topic: 'Comfortable Apartment in Palace',
@@ -38,6 +42,7 @@ export class HomeComponent implements OnInit {
       bathnum: 1,
     },
     {
+      id: '3',
       for: 'sale',
       img: './assets/03.jpg',
       topic: 'Comfortable Apartment in Palace',
@@ -48,6 +53,7 @@ export class HomeComponent implements OnInit {
       bathnum: 1,
     },
     {
+      id: '4',
       for: 'sale',
       img: './assets/04.jpg',
       topic: 'Comfortable Apartment in Palace',
@@ -58,6 +64,7 @@ export class HomeComponent implements OnInit {
       bathnum: 1,
     },
     {
+      id: '5',
       for: 'sale',
       img: './assets/05.jpg',
       topic: 'Comfortable Apartment in Palace',
@@ -68,6 +75,7 @@ export class HomeComponent implements OnInit {
       bathnum: 1,
     },
     {
+      id: '6',
       for: 'sale',
       img: './assets/06.jpg',
       topic: 'home',
@@ -79,14 +87,12 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(public sharedService: SharedService, public router: Router) {}
 
   ngOnInit(): void {}
 
   clickOn_card(home) {
     console.log(home);
-  }
-  hamid_btn() {
-    this.panelOpenState = !this.panelOpenState;
+    this.router.navigate(['main/home/detail/' + home.id]);
   }
 }

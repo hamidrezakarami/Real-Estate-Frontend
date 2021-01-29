@@ -1,10 +1,12 @@
 <mat-accordion>
-  <mat-expansion-panel [expanded]="panelOpenState" class="mt-50" hideToggle>
+  <mat-expansion-panel
+    [expanded]="sharedService.searchBtnFlag"
+    class="mt-50"
+    hideToggle
+  >
     <app-search-bar></app-search-bar>
   </mat-expansion-panel>
-
 </mat-accordion>
-<button (click) = "hamid_btn()">hamid</button>
 <div class="f-w bootstrap-wrapper">
   <div class="padding">
     <div class="row section_title">
@@ -19,6 +21,7 @@
         (click)="clickOn_card(home)"
       >
         <app-home-card
+          class="cursor_p"
           [for]="home.for"
           [img]="home.img"
           [addr]="home.addr"
