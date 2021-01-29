@@ -281,6 +281,7 @@ export class ToolbarComponent extends Page implements OnInit {
   menu_OnClick(menu: any) {
     this.router.navigate([menu.link]);
     console.log(menu.link);
+    this.sharedService.searchBtnFlag = false
 
     // this.loading = true;
     // if (this.ms.thislink && this.ms.thislink.toString() === menu.link) {
@@ -316,5 +317,6 @@ export class ToolbarComponent extends Page implements OnInit {
 
   onSearchBtn() {
     this.sharedService.searchBtnFlag = !this.sharedService.searchBtnFlag;
+    this.router.navigate(['main/home']);
   }
 }

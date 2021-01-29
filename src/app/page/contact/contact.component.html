@@ -1,0 +1,62 @@
+<div class="f-w f-h bootstrap-wrapper">
+  <div class="padding">
+    <div class="row section_title">
+      <div class="col mt-80">
+        <h3>Cpontact Us</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mt-100"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <form id="form" class="f-w">
+          <mat-form-field class="f-w">
+            <mat-label>Subject</mat-label>
+            <input
+              matInput
+              placeholder="Enter Subject"
+              [formControl]="SFormControl"
+            />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+          <mat-form-field id="comment" class="f-w">
+            <mat-label>Comment</mat-label>
+            <textarea
+              matInput
+              placeholder="Ex. It makes me feel..."
+              [formControl]="CFormControl"
+            ></textarea>
+          </mat-form-field>
+        </form>
+        <button class="boxed-btn3-line" >
+            <!-- (click)="onClickLogOut()" -->
+            Send
+          </button>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        <div class="media contact-info">
+          <mat-icon class="contact-info__icon">house</mat-icon>
+          <div class="media-body">
+            <h3 class="mb--6">I.R.IRAN</h3>
+            <p>Zanjan</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <mat-icon class="contact-info__icon">call</mat-icon>
+          <div class="media-body">
+            <h3 class="mb--6">+98 919 997 3422</h3>
+            <p>Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <mat-icon class="contact-info__icon">email</mat-icon>
+          <div class="media-body">
+            <h3 class="mb--6">Hamidrezakarami16@gmail.com</h3>
+            <p>Send us your comments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

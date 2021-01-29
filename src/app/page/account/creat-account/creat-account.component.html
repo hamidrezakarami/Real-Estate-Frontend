@@ -1,0 +1,89 @@
+<div class="f-w f-h bootstrap-wrapper">
+  <div class="padding">
+    <div class="row section_title">
+      <div class="col mt-80">
+        <h3>Creat Account</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 t-center">
+        <mat-icon class="back-icon" matTooltip="Back" (click)="backBtn()"
+          >keyboard_backspace</mat-icon
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="mt-100"></div>
+    </div>
+    <form id="form" class="f-w">
+      <div class="row">
+        <div class="col-xl-6 col-md-8 col-lg-6">
+          <mat-form-field class="f-w">
+            <mat-label>First Name</mat-label>
+            <input matInput [formControl]="FNameFormControl" />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              First Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-md-8 col-lg-6">
+          <mat-form-field class="f-w">
+            <mat-label>Long Last Name That Will Be Truncated</mat-label>
+            <input matInput [formControl]="LNameFormControl" />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Last Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mt-50"></div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-8 col-lg-6">
+          <mat-form-field class="f-w">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              [formControl]="emailFormControl"
+              [errorStateMatcher]="matcher"
+              placeholder="Ex. pat@example.com"
+            />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            <mat-hint>Errors appear instantly!</mat-hint>
+            <mat-error
+              *ngIf="
+                emailFormControl.hasError('email') &&
+                !emailFormControl.hasError('required')
+              "
+            >
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-md-8 col-lg-6">
+          <mat-form-field class="f-w">
+            <mat-label>Telephone</mat-label>
+            <span matPrefix>+98 &nbsp;</span>
+            <input
+              type="tel"
+              matInput
+              placeholder="555-555-1234"
+              [formControl]="PFormControl"
+            />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

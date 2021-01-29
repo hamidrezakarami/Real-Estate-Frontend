@@ -45,6 +45,10 @@ body {
 .f-w {
   width: 100%;
 }
+.f-h{
+  height: 99vh;
+}
+
 
 // @import "./app/app.component.sass"
 
@@ -336,35 +340,11 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-html,
-body {
-  // height: 100%;
-}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-// <------------------------ material ------------------------> 
-.ng5-slider-pointer {
-  background-color: #fdad5c !important;
+.t-center{
+  text-align: center;
 }
-.ng5-slider-active::after {
-  background-color: #fd8f5e !important;
-}
-.ng5-slider .ng5-slider-bubble {
-  color: whitesmoke !important;
-}
-.ng5-slider .ng5-slider-selection {
-  background: #fdad5c !important;
-}
-.mat-form-field-label {
-  color: #fdad5c !important;
-}
-.mat-select-arrow{
-  color: #fdad5c !important;
-}
-.mat-select-value{
-  color: whitesmoke;
-}
-
-// <------------------------ End material ------------------------> 

@@ -10,8 +10,16 @@ export class Assistant {
     },
     {
       id: 1,
+      name: 'Account',
+      link: '/main/account',
+      fontIcon: 'dashboard',
+      icon: '',
+      admin: false,
+    },
+    {
+      id: 2,
       name: 'Contact',
-      link: '/search/students',
+      link: '/main/contact',
       fontIcon: 'account_box',
       icon: '',
       admin: false,

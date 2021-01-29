@@ -9,13 +9,11 @@ import { MaterialModule } from './shared/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Toaster, ToastNotificationsModule } from './core/toast-notification';
-import { CreateAccountComponent } from './page/create-account/create-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CreateAccountComponent,
   
   ],
   imports: [
@@ -27,6 +25,8 @@ import { CreateAccountComponent } from './page/create-account/create-account.com
     ReactiveFormsModule,
     HttpClientModule,
     ToastNotificationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [Toaster],
   bootstrap: [AppComponent],
