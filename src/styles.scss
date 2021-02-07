@@ -45,10 +45,9 @@ body {
 .f-w {
   width: 100%;
 }
-.f-h{
+.f-h {
   height: 99vh;
 }
-
 
 // @import "./app/app.component.sass"
 
@@ -345,6 +344,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-.t-center{
+.t-center {
   text-align: center;
+}
+.cp {
+  cursor: pointer;
 }

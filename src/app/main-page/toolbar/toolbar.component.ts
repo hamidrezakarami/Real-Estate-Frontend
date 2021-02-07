@@ -319,4 +319,7 @@ export class ToolbarComponent extends Page implements OnInit {
     this.sharedService.searchBtnFlag = !this.sharedService.searchBtnFlag;
     this.router.navigate(['main/home']);
   }
+  onClickProfileName(){
+    this.router.navigate(['/main/account/editacc'])
+  }
 }
