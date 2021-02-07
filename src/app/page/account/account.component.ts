@@ -12,6 +12,9 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onClickEditInfo(){
+    this.router.navigate(['/main/account/editacc'])
+  }
   onClickCreatAcc(){
     this.router.navigate(["main/account/creatacc"])
   }

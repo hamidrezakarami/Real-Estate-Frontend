@@ -5,9 +5,10 @@ import { AccountComponent } from './account.component';
 import { AccountRoutingModule } from './account-routing.module';
 import { MaterialModule } from 'src/app/shared/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditAccountComponent } from './edit-account/edit-account.component';
 
 @NgModule({
-  declarations: [CreatAccountComponent, AccountComponent],
+  declarations: [CreatAccountComponent, AccountComponent, EditAccountComponent],
   imports: [
     CommonModule,
     AccountRoutingModule,

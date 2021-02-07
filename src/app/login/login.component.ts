@@ -171,4 +171,7 @@ export class LoginComponent extends Page implements OnInit {
     // this.emailInput.nativeElement.value = '';
     this.selectedTab = 0;
   }
+  onClickSignIn(){
+    this.router.navigate(['/signIn'],{queryParams :{RouteWith:"SingIn"}})
+  }
 }

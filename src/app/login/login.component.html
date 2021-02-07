@@ -32,11 +32,11 @@
           <div fxFlex="100%" *ngIf="errorDescription" class="error">
             <span class="error">{{ errorDescription }}</span>
           </div>
-          <div class="pos">
+          <!-- <div class="pos">
             <mat-checkbox class="Remember" fxFlex="50%"
               >Keep Me Logged In</mat-checkbox
             >
-          </div>
+          </div> -->
           <div class="pos margin-top-50">
             <button
               fxFlex="50%"
@@ -46,6 +46,9 @@
               #loginInput
             >
               Login
+            </button>
+            <button class="forget-btn" fxFlex="50%" mat-button (click)="onClickSignIn()">
+              Sign in
             </button>
             <button class="forget-btn" fxFlex="50%" mat-button (click)="next()">
               Forget password ?

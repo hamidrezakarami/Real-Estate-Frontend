@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -28,9 +28,14 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./creat-account.component.scss'],
 })
 export class CreatAccountComponent implements OnInit {
-  constructor(public router : Router) {}
+  backToSingIn: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(public router: Router, public route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    const { RouteWith } = this.route.snapshot.queryParams;
+    this.backToSingIn = RouteWith == 'SingIn' ? true : false;
+  }
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -41,8 +46,8 @@ export class CreatAccountComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-
-  backBtn(){
-    this.router.navigate(['main/account'])
+  backBtn() {
+    if (this.backToSingIn) this.router.navigate(['login']);
+    else this.router.navigate(['main/account']);
   }
 }

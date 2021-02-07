@@ -31,3 +31,32 @@
 #form ::ng-deep .mat-form-field-wrapper {
   font-size: 18px;
 }
+.boxed-btn3-line {
+  background: linear-gradient(to right, white 0%, whitesmoke 100%);
+  color: #fdae5c !important;
+  display: inline-block;
+  padding: 14px 31px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: 0;
+  border: 1px solid #fdae5c;
+  border-radius: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.boxed-btn3-line:hover {
+  color: #fff !important;
+  border: 1px solid transparent;
+  background: #fdae5c;
+  background: -moz-linear-gradient(left, #fdae5c 0%, #fd8e5e 100%);
+  background: -webkit-linear-gradient(left, #fdae5c 0%, #fd8e5e 100%);
+  background: linear-gradient(to right, #fdae5c 0%, #fd8e5e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdae5c', endColorstr='#fd8e5e',GradientType=1 );
+}
+
+.mt-100{
+  margin-top: 100px;
+}

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MainPageModule } from './main-page/main-page.module';
+import { CreatAccountComponent } from './page/account/creat-account/creat-account.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'logout',
     component: LoginComponent,
+  },
+  {
+    path: 'signIn',
+    component: CreatAccountComponent,
   },
   { path: '**', redirectTo: 'login' },
 ];

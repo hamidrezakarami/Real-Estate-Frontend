@@ -18,7 +18,7 @@
       <div
         class="card col-xl-4 col-md-6 col-lg-4"
         *ngFor="let home of homeList"
-        (click)="clickOn_card(home)"
+        (click)="onClickCard(home)"
       >
         <app-home-card
           class="cursor_p"
@@ -37,7 +37,7 @@
       <div class="col-xl-12">
         <div class="popular_property">
           <div class="more_property_btn text-center">
-            <button class="boxed-btn3-line">More Properties</button>
+            <button class="boxed-btn3-line" (click)="onClickMoreProperties()">More Properties</button>
           </div>
         </div>
       </div>
